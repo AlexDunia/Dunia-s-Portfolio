@@ -5,12 +5,15 @@ import Myhome from '@/components/MyhomeView.vue'
 import Aboutme from '@/components/AboutmeView.vue'
 import Tech from '@/components/TechstackView.vue'
 // Website images
-// import Cs from '../assets/images/casestudyad.jpg';
-import Cs from '../assets/images/tix.gif';
-import Cstwo from '../assets/images/sbjmgif.gif';
-// import Cstwo from '../assets/images/bbtad.jpg';
+import Cs from '../assets/images/casestudyad.jpg';
+import Tix from '../assets/images/tix.gif';
+import Anna from '../assets/images/annagif.gif';
+import Paiempire from '../assets/images/paiempiregif.gif';
+import Fp from '../assets/images/fpgif.gif';
+import Sbjm from '../assets/images/sbjmgif.gif';
+import Cstwo from '../assets/images/bbtad.jpg';
 import Csthree from '../assets/images/ffwbg.jpg';
-import Csfour from '../assets/images/fextellarad.jpg';
+import Csfour from '../assets/images/fext.gif';
 import Csfive from '../assets/images/trhiad.jpg';
 import Cssix from '../assets/images/henrochiead.jpg';
 // Graphic design images
@@ -65,6 +68,42 @@ export default {
     return{
       carouselSlides : [
       {
+          image: Tix, url: "https://tixdemand.com/",
+          name: "TixDemand", url: "https://tixdemand.com/",
+          timeframe: "Online Ticket Platform",
+          description: "Developed an online ticket platform with Vue.js for the frontend and Laravel for the backend, utilizing MySQL for the database. Implemented authentication, admin dashboards, and a personalized admin panel. Recently added a feature to notify event planners of weekly ticket purchases.",
+        },
+        {
+          image: Anna, url: "https://www.annapurna-tiffins.com/",
+          name: "Anna", url: "https://www.annapurna-tiffins.com/",
+          timeframe: "Food Cart Website",
+          description: "Developed a food cart website where customers can learn about the business and view the menu online. Implemented strong SEO practices to ensure top rankings on Google.",
+      },
+        {
+          image: Paiempire, url: "https://paiempire.com.ng/",
+          name: "Paiempire", url: "https://paiempire.com.ng/",
+          timeframe: "Schedule Real Estate Viewings",
+          description: "Developed a web application for scheduling real estate viewings using Vue.js for the frontend and Laravel for the backend, with MySQL as the database. Implemented an admin panel for posting and deleting services, blogs, newsletters, and more.",
+      },
+        {
+          image: Sbjm, url: "https://styledbyjm.com.ng/",
+          name: "Styled by Jasmine", url: "https://styledbyjm.com.ng/",
+          timeframe: "Real estate web application",
+          description: "Developed a full-stack e-commerce website featuring Vue.js for the frontend and Vanilla PHP for the backend, integrated payment processing through Paystack, and implemented diverse delivery fees based on geographic regions. Utilized MySQL for the database. User interface designed with Figma ",
+        },
+        {
+          image: Fp, url: "https://thefriendlyprices.com/",
+          name: "Friendly Prices", url: "https://thefriendlyprices.com/",
+          timeframe: "Fashion E-commerce website",
+          description: "Designed and developed an e-commerce website on WordPress with dynamic delivery fees based on user locations. Implemented a user registration system allowing wholesale access and prices who wish to resell.",
+        },
+        {
+          image: Csfour, url: "https://fextellar.com/",
+          name: "Fextellar", url: "https://fextellar.com/",
+          timeframe: "Software company website",
+          description: "Built with React Js. I Created written content for the official company website, Created all Gifs found on the site with Animation effect in Photoshop. Designed images, icons and banners on the website. ",
+          },
+        {
           image: Cs, url: "https://beefahsapartments.netlify.app/",
           name: "Beefahs Apartments", url: "https://beefahsapartments.netlify.app/",
           timeframe: "Real estate web application",
@@ -82,12 +121,6 @@ export default {
           name: "Fluxxy Frutties Cafe", url: "https://ffwvue.netlify.app/",
           timeframe: "Full-Stack E-commerce Website",
           description: "A website that allows people buy food online. I created the user interface with Figma, Implemented on my browser with VUE JS and worked with PHP and MYSQL for the backend and database respectively.",
-          },
-          {
-          image: Csfour, url: "https://fextellar.com/",
-          name: "Fextellar", url: "https://fextellar.com/",
-          timeframe: "Software company website",
-          description: "Built with React Js. I Created written content for the official company website, Created all Gifs found on the site with Animation effect in Photoshop. Designed images, icons and banners on the website. ",
           },
           {
           image: Csfive, url: " https://trhi.netlify.app/",
@@ -241,12 +274,12 @@ components: { Hello, Welcome, Myhome, Aboutme, Tech },
 
 <div className="gen" v-if="isshoww">
     <Hello className="carousel" v-slot={myimg}>
-    <Welcome v-for="(oneslide, index) in Allgraphics" :key="index">
+    <!-- <Welcome v-for="(oneslide, index) in Allgraphics" :key="index">
          <div v-show="myimg === index + 1" className="ourimg">
           <img :src="oneslide.image"/>
           <p className="mored"> Below is a link to my google drive that contains more of my designs </p>
          </div>
-</Welcome>
+    </Welcome> -->
   </Hello>
 </div>
 
@@ -259,11 +292,8 @@ components: { Hello, Welcome, Myhome, Aboutme, Tech },
 
 <div className="scd">
   <li className="scn"> <a :href="slide.url">{{ slide.name }}</a> </li>
-<!-- <li className="scn"> {{slide.name}}  </li> -->
 <li className="sctf"> {{slide.timeframe}}  </li>
 <li className="scdesc"> {{slide.description}}  </li>
-<!-- <li className="scr"> {{slide.ratings}}  </li>
-<li className="scp"> ${{slide.price}}  <span className="soldprice">  ${{slide.prevpprice}} </span> </li> -->
 <button className="vm"> <a :href="slide.url">  View more </a> </button>
 </div>
 
@@ -395,7 +425,6 @@ components: { Hello, Welcome, Myhome, Aboutme, Tech },
 
 #github {
   transition: transform 1s;
-  /* transform-origin: top; */
 }
 
 #github:hover {
@@ -415,7 +444,6 @@ components: { Hello, Welcome, Myhome, Aboutme, Tech },
 
 #linkedin {
   transition: transform 1s;
-  /* transform-origin: top; */
 }
 
 #linkedin:hover {

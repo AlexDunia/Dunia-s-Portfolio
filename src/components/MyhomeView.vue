@@ -1,4 +1,30 @@
+
+<!-- <script>
+import { RouterLink, RouterView } from 'vue-router'
+
+export default{
+
+  }
+
+</script> -->
+
 <script>
+import { onMounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router'
+
+export default{
+       methods: {
+       scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        // Using smooth scroll behavior for a smoother transition
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  }
+
 </script>
 
 <template>
@@ -11,24 +37,20 @@
 
     <div className="herotext">
         <h1> Hi, I’m Alex Dunia, <span className="yellow">  A
-        front-end developer </span>  and
-       <span className="yellow"> Designer. </span>
+         developer, designer </span> and   <span className="yellow"> Technical Writer</span>
+       <!-- <span className="yellow"> Designer. </span> -->
         </h1>
 
-        <p> I help medium and large scale companies build and launch products. I am open to working with a team and working alone. <br/> Not convinced?  </p>
+        <p> I code Web apps for companies and individuals and create the best technical writing materials . Lets talk about your project today   </p>
 
         <br/>
+        <!-- <RouterLink  to="#aboutme" @click="handleClick('section3')"> Click me bitch </RouterLink> -->
 
         <div className="btnmain">
-            <button className="btntwo"> See my work </button>
-        <button className="btnone"> See my work </button>
+            <RouterLink  to="#projects" @click="scrollToSection('section2')">
+                <button className="btntwo"> See my work </button>
+        <button className="btnone"> See my work </button></RouterLink>
         </div>
-
-        <!-- <button className="button-background-move" role="button">Background Move</button> -->
-
-
-        <!-- <button class="wlbtnn"> See my works </button> -->
-
     </div>
 
     <div className="heroimg">
@@ -114,25 +136,11 @@
     font-size:15px;
     font-weight:200;
     margin-top:14px;
-}
+    opacity: 0; /* Initial opacity set to 0 for the fade-in effect */
+    transform: translateY(100%); /* Initial position outside the viewport */
 
-.herotext h1{
-    font-weight:100;
-    font-size:54px;
-    line-height:1.2em;
-
-}
-
-/* .heroimg{
-    flex-basis:40%;
-} */
-
-.heroimg img{
-    width:300px;
-}
-
-.yellow{
-    color:#E1C73F;
+    /* Animation properties */
+    animation: slideUp 4s ease-in forwards;
 }
 
 .btnmain{
@@ -140,6 +148,63 @@
     width:30vh;
     /* height: 100vh; */
     position: relative;
+    opacity: 0; /* Initial opacity set to 0 for the fade-in effect */
+    transform: translateY(100%); /* Initial position outside the viewport */
+
+    /* Animation properties */
+    animation: slideUp 6.5s ease-in forwards;
+}
+
+.herotext h1 {
+    font-weight: 100;
+    font-size: 54px;
+    line-height: 1.2em;
+    opacity: 0; /* Initial opacity set to 0 for the fade-in effect */
+    transform: translateY(-100%); /* Initial position outside the viewport */
+
+    /* Animation properties */
+    animation: slideIn 2s ease-out forwards; /* Animation duration, timing function, and fill mode */
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Final opacity set to 1 for fully visible */
+        transform: translateY(0); /* Final position at 0 to slide in */
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1; /* Final opacity set to 1 for fully visible */
+        transform: translateY(0); /* Final position at 0 to slide in */
+    }
+}
+
+
+
+/* .heroimg{
+    flex-basis:40%;
+} */
+
+.heroimg {
+    perspective: 500px;
+}
+
+.heroimg img {
+    width: 300px;
+    transition: transform 1s, filter 1.5s;
+}
+
+.heroimg img:hover {
+    filter: brightness(1.3) saturate(1);
+    cursor: pointer;
+    transform: rotateY(360deg) translateZ(90px);
+}
+
+
+.yellow{
+    color:#E1C73F;
 }
 
 .btnone {

@@ -100,16 +100,41 @@ export default{
     top: 150px;
     width:85%;
     left: 0;
-  right: 0;
-  margin: 0 auto;
+     right: 0;
+     perspective: 500px;
+     font-size:40px;
+    margin: 0 auto;
     display:flex;
     z-index: 3;
     /* align-items:center;  */
 
 }
 
+.navigate:hover{
+    cursor:pointer;
+}
+
+.togglepagep:hover{
+    filter: brightness(1.3) saturate(1);
+    cursor: pointer;
+    font-size:50px;
+    transform: rotateY(360deg) translateZ(10px);
+}
+
+.togglepage:hover{
+    filter: brightness(1.3) saturate(1);
+    cursor: pointer;
+    font-size:50px;
+    transform: rotateY(360deg) translateZ(10px);
+}
+
+.togglepage{
+    transition: transform 1s, filter 1.5s;
+}
+
 .togglepagep{
     float:left;
+    transition: transform 1s, filter 1.5s;
 }
 
 /* .togglepage{
