@@ -7,6 +7,7 @@ import Tech from '@/components/TechstackView.vue'
 // Website images
 import Cs from '../assets/images/casestudyad.jpg';
 import Tix from '../assets/images/tix.gif';
+import RR from '../assets/images/rr.gif';
 import Anna from '../assets/images/annagif.gif';
 import Paiempire from '../assets/images/paiempiregif.gif';
 import Fp from '../assets/images/fpgif.gif';
@@ -67,11 +68,17 @@ export default {
   data:function(){
     return{
       carouselSlides : [
+          {
+          image: RR, url: "https://www.figma.com/proto/CmZeAnVOlbLVa4QtZEoKBo/Real-City--Copy-?node-id=3-4891&t=gyeKTghdNFlVxrCY-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1",
+          name: "RealCityRealty", url: "https://www.figma.com/proto/CmZeAnVOlbLVa4QtZEoKBo/Real-City--Copy-?node-id=3-4891&t=gyeKTghdNFlVxrCY-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1",
+          timeframe: "Real Esatate Web Application",
+          description: "I worked with Realcity Realty to build their real estate platform. I started by writing the SRS document to plan out features, then turned it into designs and prototypes. After that, I used Vue.js to create the front end, making it responsive and easy to use for both agents and clients.",
+        },
       {
-          image: Tix, url: "https://tixdemand.com/",
-          name: "TixDemand", url: "https://tixdemand.com/",
+          image: Tix, url: "https://kakaworld.co/",
+          name: "TixDemand", url: "https://kakaworld.co/",
           timeframe: "Online Ticket Platform",
-          description: "Developed an online ticket platform with Vue.js for the frontend and Laravel for the backend, utilizing MySQL for the database. Implemented authentication, admin dashboards, and a personalized admin panel. Recently added a feature to notify event planners of weekly ticket purchases.",
+          description: "Developed an online ticket platform with Vue.js for the frontend and Laravel for the backend, utilizing MySQL for the database.",
         },
         {
           image: Anna, url: "https://www.annapurna-tiffins.com/",
