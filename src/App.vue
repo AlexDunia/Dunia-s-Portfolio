@@ -53,7 +53,7 @@ export default {
     <div className="fnavv">
 
       <div class="fnavimg">
-        <img src="@/assets/images/add.png" />
+        <img src="./assets/images/add.png" />
       </div>
 
       <div className="fnavlinks">
@@ -61,7 +61,7 @@ export default {
         <RouterLink to="#projects" @click="scrollToSection('section2')"> Projects</RouterLink>
         <RouterLink to="#aboutme" @click="scrollToSection('section3')"> About me </RouterLink>
         <RouterLink to="#contact" @click="scrollToSection('section4')"> Contact </RouterLink>
-        <a href="https://dev.to/dunia"> Blog </a>
+        <a href="https://dev.to/dunia"> My Articles </a>
       </div>
 
       <!-- <div class="changecolors">
@@ -74,7 +74,8 @@ export default {
 </div> -->
 
       <div class="fnavimgcartoon">
-        <img src="@/assets/images/adcartoon.png" />
+        <img src="./assets/images/adcartoon.png" />
+
       </div>
 
     </div>
@@ -85,7 +86,8 @@ export default {
     <div className="secondfnavv">
 
       <div class="secondfnavimg">
-        <img src="@/assets/images/add.png" />
+       <img src="./assets/images/add.png" />
+
       </div>
 
 
@@ -100,7 +102,8 @@ export default {
         </div>
 
         <div>
-          <img src="@/assets/images/adcartoon.png" />
+         <img src="./assets/images/adcartoon.png" />
+
         </div>
 
       </div>
@@ -112,7 +115,7 @@ export default {
       <RouterLink to="#projects" @click="scrollToSection('section2')"> Projects</RouterLink>
       <RouterLink to="#aboutme" @click="scrollToSection('section3')"> About me </RouterLink>
       <RouterLink to="#contact" @click="scrollToSection('section4')"> Contact </RouterLink>
-      <a href="https://dev.to/dunia"> Blog </a>
+      <a href="https://dev.to/dunia"> My Articles </a>
 
     </div>
 

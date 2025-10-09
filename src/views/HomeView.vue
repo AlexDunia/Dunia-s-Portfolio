@@ -76,7 +76,7 @@ export default {
         },
       {
           image: Tix, url: "https://kakaworld.co/",
-          name: "TixDemand", url: "https://kakaworld.co/",
+          name: "Kaka World Co", url: "https://kakaworld.co/",
           timeframe: "Online Ticket Platform",
           description: "Developed an online ticket platform with Vue.js for the frontend and Laravel for the backend, utilizing MySQL for the database.",
         },
@@ -301,11 +301,11 @@ components: { Hello, Welcome, Myhome, Aboutme, Tech },
   <li className="scn"> <a :href="slide.url">{{ slide.name }}</a> </li>
 <li className="sctf"> {{slide.timeframe}}  </li>
 <li className="scdesc"> {{slide.description}}  </li>
-<button className="vm"> <a :href="slide.url">  View more </a> </button>
+<button className="vm"> <a :href="slide.url" target="_blank">  View more </a> </button>
 </div>
 
 <div className="scimg">
-<li> <a :href="slide.url"> <img :src="slide.image"/> </a> </li>
+<li> <a :href="slide.url" target="_blank"> <img :src="slide.image"/> </a> </li>
 </div>
 
 </div>
