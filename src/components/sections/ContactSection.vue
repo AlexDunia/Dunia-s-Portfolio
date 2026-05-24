@@ -86,10 +86,11 @@
 
 <style scoped>
 .contact-section {
-  margin: clamp(40px, 6vw, 80px) clamp(14px, 4vw, 40px);
-  padding: clamp(36px, 5vw, 60px);
+  width: min(1160px, calc(100% - (var(--page-gutter) * 2)));
+  margin: clamp(40px, 6vw, 80px) auto;
+  padding: clamp(28px, 5vw, 60px);
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 32px;
+  border-radius: clamp(18px, 3vw, 32px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
@@ -97,15 +98,14 @@
 }
 
 .contact-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
   justify-content: space-between;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .contact-metadata {
-  flex: 1;
-  min-width: 240px;
+  min-width: 0;
   display: grid;
   gap: 18px;
 }
@@ -129,15 +129,15 @@
   margin-top: 6px;
   display: inline-block;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.1rem;
   color: #fef6f1;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .contact-social {
-  flex: 1;
-  min-width: 280px;
+  min-width: 0;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 26px;
   padding: 24px 26px;
@@ -149,7 +149,7 @@
   font-size: 1.4rem;
   color: #fff;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .reachflex {
@@ -234,7 +234,7 @@
   font-size: 1.45rem;
   color: #fff;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .personname p {
@@ -251,7 +251,7 @@
 
 @media (max-width: 900px) {
   .contact-grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .personflex {
@@ -261,6 +261,86 @@
 
   .personname p {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    gap: 20px;
+  }
+
+  .contact-meta,
+  .contact-social {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .label {
+    letter-spacing: 0.2em;
+  }
+
+  .value,
+  .follow-heading h3,
+  .personname h3 {
+    font-size: 1rem;
+  }
+
+  .reachflex {
+    gap: 9px;
+  }
+
+  .reachflexdiv img {
+    width: 30px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 280px) {
+  .contact-section {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .contact-grid {
+    gap: 16px;
+  }
+
+  .contact-meta,
+  .contact-social {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .label {
+    font-size: 0.46rem;
+    letter-spacing: 0.08em;
+  }
+
+  .value,
+  .follow-heading h3,
+  .personname h3 {
+    font-size: 0.78rem;
+  }
+
+  .social-note,
+  .personname p,
+  .primary-btn,
+  .secondary-btn {
+    font-size: 0.66rem;
+  }
+
+  .reachflexdiv img {
+    width: 24px;
+  }
+
+  .personfleximg img {
+    width: 48px;
   }
 }
 </style>

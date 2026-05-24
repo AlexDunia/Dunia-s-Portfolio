@@ -169,7 +169,7 @@ const openLiveProject = () => {
 <style scoped>
 .project-detail {
   min-height: 100vh;
-  padding: clamp(128px, 12vw, 154px) clamp(18px, 4vw, 90px) clamp(48px, 6vw, 80px);
+  padding: clamp(104px, 12vw, 154px) var(--page-gutter) clamp(42px, 6vw, 80px);
   background: linear-gradient(180deg, #fff 0%, #fbfaf8 100%);
   color: #0f0f0f;
   display: flex;
@@ -179,7 +179,7 @@ const openLiveProject = () => {
 
 .detail-hero {
   background: #ffffff;
-  border-radius: 26px;
+  border-radius: clamp(16px, 2vw, 26px);
   padding: clamp(28px, 3vw, 48px);
   border: 1px solid #ece7e1;
   box-shadow: 0 24px 70px rgba(15, 15, 15, 0.08);
@@ -188,23 +188,22 @@ const openLiveProject = () => {
 }
 
 .hero-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 460px);
   align-items: stretch;
   justify-content: space-between;
   gap: clamp(32px, 5vw, 56px);
-  flex-wrap: wrap;
 }
 
 .hero-copy {
-  flex: 1;
-  min-width: 280px;
+  min-width: 0;
 }
 
 .detail-hero h1 {
   margin: 12px 0;
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0;
 }
 
@@ -234,7 +233,8 @@ const openLiveProject = () => {
 }
 
 .metric-card {
-  min-width: 160px;
+  flex: 1 1 150px;
+  min-width: min(160px, 100%);
   background: #f7f5f1;
   border-radius: 16px;
   border: 1px solid #e3dbd2;
@@ -296,7 +296,7 @@ const openLiveProject = () => {
 
 .detail-body {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
   gap: clamp(24px, 3vw, 40px);
 }
 
@@ -334,7 +334,7 @@ const openLiveProject = () => {
   margin: 0;
   font-size: 1.12rem;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .impact-list {
@@ -517,14 +517,16 @@ const openLiveProject = () => {
   .detail-body {
     grid-template-columns: 1fr;
   }
+
   .hero-grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
   .project-detail {
-    padding: 110px clamp(22px, 8vw, 48px) clamp(30px, 8vw, 48px);
+    padding-top: 96px;
+    gap: 24px;
   }
 
   .detail-hero {
@@ -537,6 +539,111 @@ const openLiveProject = () => {
 
   .hero-visual {
     width: 100%;
+  }
+
+  .hero-metrics,
+  .detail-actions {
+    gap: 12px;
+  }
+
+  .primary-action,
+  .ghost-action {
+    width: 100%;
+    text-align: center;
+    padding-inline: 18px;
+  }
+
+  .detail-panel,
+  .detail-copy {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .detail-hero {
+    padding: 20px;
+  }
+
+  .detail-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .eyebrow,
+  .metric-card span,
+  .hero-visual figcaption {
+    letter-spacing: 0.16em;
+  }
+
+  .hero-visual {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-visual figcaption {
+    padding: 12px 14px;
+    font-size: 0.62rem;
+  }
+
+  .detail-copy,
+  .detail-panel {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 280px) {
+  .project-detail {
+    padding-top: 76px;
+    gap: 16px;
+  }
+
+  .detail-hero {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .detail-hero h1 {
+    font-size: 1.12rem;
+    margin: 8px 0;
+  }
+
+  .detail-lede,
+  .detail-copy p,
+  .impact-list li,
+  .primary-action,
+  .ghost-action {
+    font-size: 0.68rem;
+  }
+
+  .eyebrow,
+  .metric-card span,
+  .hero-visual figcaption {
+    font-size: 0.48rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero-metrics {
+    margin-top: 18px;
+  }
+
+  .metric-card,
+  .detail-copy,
+  .detail-panel {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .hero-visual {
+    border-radius: 12px;
+  }
+
+  .stack-grid span {
+    padding: 5px 8px;
+    font-size: 0.58rem;
+  }
+
+  .project-toast {
+    right: 10px;
+    bottom: 10px;
+    max-width: calc(100vw - 20px);
   }
 }
 </style>

@@ -41,51 +41,76 @@
 <style scoped>
 .tech-section {
   background: #e1c73f;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: clamp(40px, 6vw, 58px) var(--page-gutter);
   margin-top: 44px;
-  margin-bottom: 70px;
+  margin-bottom: clamp(42px, 7vw, 70px);
 }
 
 .techspace {
-  width: 82%;
+  width: min(1120px, 100%);
   margin: auto;
-  margin-top: 20px;
 }
 
 .tech h1 {
   font-size: 24px;
   color: #450c2f;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .tech p {
-  font-size: 15px;
-  padding-top: 30px;
+  font-size: clamp(0.82rem, 1.5vw, 0.94rem);
+  padding-top: clamp(16px, 3vw, 30px);
   line-height: 1.75em;
   font-family: var(--font-body);
   font-weight: 400;
 }
 
 .stackflex {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
+  justify-items: center;
+  gap: clamp(18px, 4vw, 36px);
+  margin-top: clamp(28px, 5vw, 50px);
 }
 
 .stackimg {
-  margin-top: 50px;
+  display: grid;
+  place-items: center;
+  min-height: 58px;
 }
 
 .stackimg img {
-  width: 50px;
+  width: clamp(34px, 7vw, 50px);
 }
 
 @media (max-width: 900px) {
+  .stackflex {
+    grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+  }
+}
+
+@media (max-width: 280px) {
+  .tech h1 {
+    font-size: 1.1rem;
+  }
+
+  .tech p {
+    font-size: 0.68rem;
+    line-height: 1.65;
+  }
+
+  .stackflex {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .stackimg {
+    min-height: 38px;
+  }
+
   .stackimg img {
-    width: 30px;
+    width: 28px;
   }
 }
 </style>

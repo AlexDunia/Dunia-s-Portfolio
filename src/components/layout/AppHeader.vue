@@ -45,8 +45,7 @@ const handleScroll = (sectionId) => {
 
 <style scoped>
 .fnav {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px var(--page-gutter);
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -55,11 +54,12 @@ const handleScroll = (sectionId) => {
 }
 
 .fnavv {
-  width: 85%;
+  width: min(1160px, 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  gap: 22px;
 }
 
 .fnavimg img {
@@ -76,8 +76,18 @@ const handleScroll = (sectionId) => {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  margin-left: 48px;
+  margin-left: clamp(18px, 3vw, 48px);
   color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1080px) {
+  .fnavimg img {
+    width: 128px;
+  }
+
+  .fnavlinks a {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 900px) {

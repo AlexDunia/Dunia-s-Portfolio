@@ -149,4 +149,16 @@ const goToSlide = (index) => {
     transform: scale(1);
   }
 }
+
+@media (max-width: 360px) {
+  .navigate {
+    margin-top: 14px;
+  }
+
+  .togglepage,
+  .togglepagep {
+    width: 34px;
+    height: 34px;
+  }
+}
 </style>

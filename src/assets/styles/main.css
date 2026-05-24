@@ -1,6 +1,6 @@
 @import './base.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --primary: #450c2f;
@@ -14,7 +14,14 @@
   --foreground-color: #fef6f1;
   --text-muted: rgba(255, 255, 255, 0.75);
   --font-body: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Sora', 'Manrope', system-ui, sans-serif;
+  --font-display: 'Abril Fatface', 'Manrope', Georgia, serif;
+  --page-gutter: clamp(14px, 5vw, 90px);
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .bd {
@@ -29,6 +36,8 @@ body {
   font-family: var(--font-body);
   background: linear-gradient(180deg, #1c0411 0%, #050105 65%, #010101 100%);
   color: var(--foreground-color);
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100vh;
   line-height: 1.7;
   font-size: 14px;
@@ -36,6 +45,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: color 0.5s, background-color 0.5s;
+}
+
+#app {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+section,
+article {
+  min-width: 0;
 }
 
 button,
@@ -56,4 +82,14 @@ button:focus-visible {
 button:active,
 a:active {
   transform: translateY(1px);
+}
+
+@media (max-width: 280px) {
+  :root {
+    --page-gutter: 10px;
+  }
+
+  body {
+    font-size: 12px;
+  }
 }

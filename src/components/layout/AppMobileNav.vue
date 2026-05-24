@@ -67,11 +67,11 @@ const handleLinkClick = (sectionId) => {
   .fnavvv {
     display: block;
     background-color: white;
-    padding-top: 20px;
+    padding: 12px var(--page-gutter) 10px;
     z-index: 10;
-    padding-bottom: 10px;
     position: fixed;
     width: 100%;
+    box-shadow: 0 8px 24px rgba(10, 10, 10, 0.08);
   }
 
   .secondfnavv {
@@ -80,47 +80,61 @@ const handleLinkClick = (sectionId) => {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0;
-    width: 85%;
+    width: min(720px, 100%);
+    gap: 14px;
   }
 
   .secondfnavimg img {
-    width: 120px;
+    width: clamp(86px, 32vw, 120px);
   }
 
   .secondfnavimgcartoon {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
 
   .secondfnavimgcartoon img {
-    width: 30px;
+    width: clamp(24px, 8vw, 30px);
   }
 
   .navflexx {
-    font-size: 16px;
+    font-size: clamp(11px, 4vw, 16px);
     padding: 7px;
     border-radius: 3px;
     background: rgb(236, 236, 236);
     cursor: pointer;
+    line-height: 1;
   }
 
   .secondfnavlinks {
-    padding-top: 35px;
-    width: 80%;
+    padding-top: 18px;
+    width: min(560px, 100%);
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 8px;
     text-align: center;
   }
 
   .secondfnavlinks a {
     color: black;
     text-decoration: none;
-    margin-top: 24px;
     display: block;
-    margin-bottom: 30px;
+    padding: 12px 0;
+    margin-bottom: 4px;
     font-family: var(--font-body);
     justify-content: center;
+  }
+}
+
+@media (max-width: 280px) {
+  .secondfnavimgcartoon img {
+    display: none;
+  }
+
+  .secondfnavlinks a {
+    padding: 9px 0;
+    font-size: 12px;
   }
 }
 </style>
