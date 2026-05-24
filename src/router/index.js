@@ -10,6 +10,11 @@ const router = createRouter({
         behavior: 'smooth'
       }
     }
+
+    return {
+      top: 0,
+      behavior: 'smooth'
+    }
   },
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

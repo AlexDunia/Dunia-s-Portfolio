@@ -43,7 +43,7 @@
   background: #e1c73f;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-top: 120px;
+  margin-top: 44px;
   margin-bottom: 70px;
 }
 
@@ -56,15 +56,16 @@
 .tech h1 {
   font-size: 24px;
   color: #450c2f;
-  font-weight: 100;
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 
 .tech p {
-  font-size: 13px;
+  font-size: 15px;
   padding-top: 30px;
-  line-height: 1.8em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  line-height: 1.75em;
+  font-family: var(--font-body);
+  font-weight: 400;
 }
 
 .stackflex {

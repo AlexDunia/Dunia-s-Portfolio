@@ -72,9 +72,9 @@ const handleScroll = (sectionId) => {
 
 .fnavlinks a {
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   margin-left: 48px;
   color: rgba(0, 0, 0, 0.8);

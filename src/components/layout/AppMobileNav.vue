@@ -119,7 +119,7 @@ const handleLinkClick = (sectionId) => {
     margin-top: 24px;
     display: block;
     margin-bottom: 30px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     justify-content: center;
   }
 }

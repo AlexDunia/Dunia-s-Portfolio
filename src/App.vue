@@ -15,12 +15,12 @@ import AppMobileNav from '@/components/layout/AppMobileNav.vue'
 
 <style scoped>
 .page-content {
-  padding-top: 150px;
+  padding-top: 0;
 }
 
 @media (max-width: 900px) {
   .page-content {
-    padding-top: 220px;
+    padding-top: 0;
   }
 }
 </style>

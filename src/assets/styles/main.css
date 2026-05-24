@@ -1,7 +1,6 @@
 @import './base.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap');
 
 :root {
   --primary: #450c2f;
@@ -14,6 +13,8 @@
   --backgroundtwo: var(--deep);
   --foreground-color: #fef6f1;
   --text-muted: rgba(255, 255, 255, 0.75);
+  --font-body: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Sora', 'Manrope', system-ui, sans-serif;
 }
 
 .bd {
@@ -25,7 +26,7 @@
 }
 
 body {
-  font-family: 'Poppins', 'Abril Fatface', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   background: linear-gradient(180deg, #1c0411 0%, #050105 65%, #010101 100%);
   color: var(--foreground-color);
   min-height: 100vh;
@@ -35,4 +36,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: color 0.5s, background-color 0.5s;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--colororigin);
+  outline-offset: 4px;
+}
+
+button:active,
+a:active {
+  transform: translateY(1px);
 }

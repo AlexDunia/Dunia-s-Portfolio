@@ -28,7 +28,7 @@ export const featuredProjects = [
     description:
       'I worked with Realcity Realty to build their real estate platform. I started by writing the SRS document to plan out features, then turned it into designs and prototypes. After that, I used Vue.js to create the front end, making it responsive and easy to use for both agents and clients.',
     stats: [
-      { label: 'Role', value: 'Lead Front-End Developer' },
+      { label: 'Role', value: 'SRS, UI Design & Vue Frontend' },
       { label: 'Duration', value: '3 months' }
     ],
     stack: ['Vue 3', 'Laravel', 'MySQL', 'Figma'],
@@ -48,7 +48,7 @@ export const featuredProjects = [
     description:
       'Developed an online ticket platform with Vue.js for the frontend and Laravel for the backend, utilizing MySQL for the database.',
     stats: [
-      { label: 'Role', value: 'Full-Stack Developer' },
+      { label: 'Role', value: 'Vue Frontend & Laravel APIs' },
       { label: 'Duration', value: '2 months' }
     ],
     stack: ['Vue 3', 'Laravel', 'MySQL', 'Stripe'],
@@ -68,7 +68,7 @@ export const featuredProjects = [
     description:
       'Developed a food cart website where customers can learn about the business and view the menu online. Implemented strong SEO practices to ensure top rankings on Google.',
     stats: [
-      { label: 'Role', value: 'UX + Front-End Designer' },
+      { label: 'Role', value: 'UX Design, Frontend & SEO' },
       { label: 'Duration', value: '1 month' }
     ],
     stack: ['Vue 3', 'SEO Optimization', 'Figma'],
@@ -88,7 +88,7 @@ export const featuredProjects = [
     description:
       'Developed a web application for scheduling real estate viewings using Vue.js for the frontend and Laravel for the backend, with MySQL as the database. Implemented an admin panel for posting and deleting services, blogs, newsletters, and more.',
     stats: [
-      { label: 'Role', value: 'Product Front-End Developer' },
+      { label: 'Role', value: 'Frontend, Admin UI & CMS' },
       { label: 'Duration', value: '1.5 months' }
     ],
     stack: ['Vue 3', 'Laravel', 'MySQL', 'Tailwind'],
@@ -108,7 +108,7 @@ export const featuredProjects = [
     description:
       'Developed a full-stack e-commerce website featuring Vue.js for the frontend and Vanilla PHP for the backend, integrated payment processing through Paystack, and implemented diverse delivery fees based on geographic regions. Utilized MySQL for the database. User interface designed with Figma.',
     stats: [
-      { label: 'Role', value: 'Front-End & Payments' },
+      { label: 'Role', value: 'Storefront, Payments & Delivery Logic' },
       { label: 'Duration', value: '2 months' }
     ],
     stack: ['Vue 3', 'PHP', 'Paystack', 'Figma'],
@@ -128,14 +128,14 @@ export const featuredProjects = [
     description:
       'Designed and developed an e-commerce website on WordPress with dynamic delivery fees based on user locations. Implemented a user registration system allowing wholesale access and prices who wish to resell.',
     stats: [
-      { label: 'Role', value: 'UI Developer' },
+      { label: 'Role', value: 'WordPress UI & Reseller Flow' },
       { label: 'Duration', value: '2 weeks' }
     ],
     stack: ['WordPress', 'Vue 3 Widgets', 'CSS'],
     details: [
-      'Crafted interactive product stories and carousels to match the brand’s warm aesthetic.',
-      'Implemented reseller tier registration to unlock wholesale pricing.',
-      'Connected Vue-powered widgets to WordPress so the marketing team could edit copy without touching code.'
+      'Created good aesthetics, and crafted interactive product carousels to match the brand’s warm aesthetic.',
+      'Fair delivery rates',
+      'Integrated Vue-powered widgets to WordPress so the marketing team could edit copy without touching code.'
     ],
     impact: 'Helped the brand launch a reseller program with frictionless reordering.'
   },
@@ -148,7 +148,7 @@ export const featuredProjects = [
     description:
       'Built with React Js. I Created written content for the official company website, Created all Gifs found on the site with Animation effect in Photoshop. Designed images, icons and banners on the website.',
     stats: [
-      { label: 'Role', value: 'Creative Lead' },
+      { label: 'Role', value: 'Content, Motion & Visual Design' },
       { label: 'Duration', value: '1 month' }
     ],
     stack: ['React', 'Photoshop', 'After Effects'],
@@ -168,7 +168,7 @@ export const featuredProjects = [
     description:
       'A web app that allows you to book apartments online. For this project, I used React js and built the user interface with Figma.',
     stats: [
-      { label: 'Role', value: 'UI / UX Engineer' },
+      { label: 'Role', value: 'UI Design & React Frontend' },
       { label: 'Duration', value: '1 month' }
     ],
     stack: ['React', 'Figma', 'Next.js'],
@@ -188,7 +188,7 @@ export const featuredProjects = [
     description:
       'A website that allows people buy dry meat online. For this project, I created the user interface with Figma, implemented on my browser with Vue.js, and worked with PHP and MySQL for the backend and database respectively.',
     stats: [
-      { label: 'Role', value: 'Front-End Developer' },
+      { label: 'Role', value: 'UI Design, Vue Frontend & PHP Backend' },
       { label: 'Duration', value: '1.5 months' }
     ],
     stack: ['Vue 3', 'PHP', 'MySQL', 'Figma'],
@@ -208,7 +208,7 @@ export const featuredProjects = [
     description:
       'A website that allows people buy food online. I created the user interface with Figma, implemented on my browser with Vue.js, and worked with PHP and MySQL for the backend and database respectively.',
     stats: [
-      { label: 'Role', value: 'Full-Stack Developer' },
+      { label: 'Role', value: 'Vue Frontend & PHP Backend' },
       { label: 'Duration', value: '1 month' }
     ],
     stack: ['Vue 3', 'PHP', 'MySQL'],
@@ -227,7 +227,7 @@ export const featuredProjects = [
     timeframe: 'Charity website',
     description: 'Built with HTML, CSS and Vanilla JS. I also designed the user interface of this website.',
     stats: [
-      { label: 'Role', value: 'UI / Front-End Designer' },
+      { label: 'Role', value: 'UI Design & HTML/CSS/JS Build' },
       { label: 'Duration', value: '3 weeks' }
     ],
     stack: ['HTML', 'CSS', 'Vanilla JS', 'Figma'],
@@ -247,7 +247,7 @@ export const featuredProjects = [
     description:
       'User interface design, developed the design into a fully functional and responsive website viewable across all devices. Built with HTML, CSS and vanilla JS.',
     stats: [
-      { label: 'Role', value: 'UI Developer' },
+      { label: 'Role', value: 'UI Design & Responsive Frontend' },
       { label: 'Duration', value: '2 weeks' }
     ],
     stack: ['HTML', 'CSS', 'Vanilla JS'],

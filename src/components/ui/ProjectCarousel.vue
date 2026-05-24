@@ -5,78 +5,20 @@ const props = defineProps({
   slides: {
     type: Array,
     default: () => []
+  },
+  showDefaultControls: {
+    type: Boolean,
+    default: true
   }
 })
 
 const currentIndex = ref(0)
 const totalSlides = computed(() => props.slides.length)
 
-const audioContext =
-  typeof window !== 'undefined'
-    ? new (window.AudioContext || window.webkitAudioContext)()
-    : null
-
-let clickBuffer = null
-
-const createClickBuffer = () => {
-  if (!audioContext) {
-    return null
-  }
-
-  const duration = 0.07
-  const frameCount = Math.floor(audioContext.sampleRate * duration)
-  const buffer = audioContext.createBuffer(1, frameCount, audioContext.sampleRate)
-  const data = buffer.getChannelData(0)
-  for (let i = 0; i < frameCount; i += 1) {
-    const decay = 1 - i / frameCount
-    data[i] = (Math.random() * 2 - 1) * decay * 0.5
-  }
-  return buffer
-}
-
-const playClickSound = () => {
-  if (!audioContext) {
-    return
-  }
-
-  if (audioContext.state === 'suspended') {
-    audioContext.resume()
-  }
-
-  if (!clickBuffer) {
-    clickBuffer = createClickBuffer()
-  }
-
-  if (!clickBuffer) {
-    return
-  }
-
-  const source = audioContext.createBufferSource()
-  source.buffer = clickBuffer
-
-  const filter = audioContext.createBiquadFilter()
-  filter.type = 'highpass'
-  filter.frequency.value = 1500
-
-  const gainNode = audioContext.createGain()
-  gainNode.gain.setValueAtTime(0.0001, audioContext.currentTime)
-  gainNode.gain.exponentialRampToValueAtTime(0.4, audioContext.currentTime + 0.005)
-  gainNode.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.08)
-
-  source.connect(filter)
-  filter.connect(gainNode)
-  gainNode.connect(audioContext.destination)
-
-  source.start()
-  source.stop(audioContext.currentTime + 0.09)
-}
-
 const nextSlide = () => {
   if (totalSlides.value === 0) {
     return
   }
-
-  playClickSound()
 
   currentIndex.value = (currentIndex.value + 1) % totalSlides.value
 }
@@ -86,16 +28,27 @@ const prevSlide = () => {
     return
   }
 
-  playClickSound()
-
   currentIndex.value = (currentIndex.value - 1 + totalSlides.value) % totalSlides.value
+}
+
+const goToSlide = (index) => {
+  if (totalSlides.value === 0 || index === currentIndex.value) {
+    return
+  }
+
+  currentIndex.value = index
 }
 </script>
 
 <template>
   <div class="omo carousel">
-    <slot :currentIndex="currentIndex" />
-    <div class="navigate" v-if="totalSlides">
+    <slot
+      :currentIndex="currentIndex"
+      :nextSlide="nextSlide"
+      :prevSlide="prevSlide"
+      :goToSlide="goToSlide"
+    />
+    <div class="navigate" v-if="totalSlides && showDefaultControls">
       <div class="togglepagep" @click="prevSlide">
         <span class="arrow arrow-left"></span>
       </div>

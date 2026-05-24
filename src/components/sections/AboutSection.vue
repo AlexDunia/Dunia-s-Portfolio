@@ -1,9 +1,3 @@
-<script setup>
-import Alexone from '@/assets/images/alexone.jpg'
-import Alexaward from '@/assets/images/alexaward.jpg'
-import Alextwo from '@/assets/images/alextwo.jpg'
-</script>
-
 <template>
   <section id="aboutme" class="about-section">
     <div class="about-flex">
@@ -21,26 +15,16 @@ import Alextwo from '@/assets/images/alextwo.jpg'
         <img src="@/assets/images/dunia.png" alt="Dunia portrait" />
       </div>
     </div>
-
-    <div id="aboutimages" class="about-images">
-      <div class="image-gallery">
-        <img :src="Alexone" alt="Alex Dunia photo" />
-      </div>
-      <div class="image-gallery">
-        <img :src="Alexaward" alt="Award photo" />
-      </div>
-      <div class="image-gallery">
-        <img :src="Alextwo" alt="Alex at event" />
-      </div>
-    </div>
   </section>
 </template>
 
 <style scoped>
 .about-section {
-  width: 82%;
-  margin: auto;
-  margin-top: 200px;
+  width: 100%;
+  margin: 0;
+  margin-top: 120px;
+  padding: 76px 9%;
+  background: #ffffff;
 }
 
 .about-flex {
@@ -54,15 +38,16 @@ import Alextwo from '@/assets/images/alextwo.jpg'
 
 .about-text h1 {
   font-size: 24px;
-  color: #450c2f;
-  font-weight: 100;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 
 .about-text p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
-  color: black;
-  font-family: 'Poppins', sans-serif;
+  color: #111111;
+  font-family: var(--font-body);
   line-height: 1.8em;
   margin-top: 20px;
 }
@@ -83,26 +68,6 @@ import Alextwo from '@/assets/images/alextwo.jpg'
   transform: rotateX(360deg) translate(10px);
 }
 
-.about-images {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 70px;
-  margin-bottom: 40px;
-}
-
-.image-gallery {
-  flex-basis: 30%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.image-gallery img {
-  max-width: 100%;
-  height: auto;
-}
-
 @media (max-width: 900px) {
   .about-flex {
     display: block;
@@ -117,8 +82,5 @@ import Alextwo from '@/assets/images/alextwo.jpg'
     width: 300px;
   }
 
-  .about-images {
-    display: block;
-  }
 }
 </style>

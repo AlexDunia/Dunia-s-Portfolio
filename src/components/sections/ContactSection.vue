@@ -128,7 +128,8 @@
 .value {
   margin-top: 6px;
   display: inline-block;
-  font-family: 'Abril Fatface', 'Times New Roman', serif;
+  font-family: var(--font-display);
+  font-weight: 600;
   font-size: 1.1rem;
   color: #fef6f1;
   text-decoration: none;
@@ -147,7 +148,8 @@
   margin: 6px 0 14px;
   font-size: 1.4rem;
   color: #fff;
-  font-family: 'Abril Fatface', 'Times New Roman', serif;
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 
 .reachflex {
@@ -183,7 +185,7 @@
 .secondary-btn {
   border-radius: 999px;
   padding: 12px 28px;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   text-decoration: none;
   font-weight: 500;
@@ -211,7 +213,7 @@
 
 .social-note {
   margin-top: 18px;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.76rem;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
@@ -231,13 +233,14 @@
   margin: 0;
   font-size: 1.45rem;
   color: #fff;
-  font-family: 'Abril Fatface', 'Times New Roman', serif;
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 
 .personname p {
   margin: 6px 0 0;
   color: rgba(255, 255, 255, 0.8);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
   max-width: 420px;
   line-height: 1.5;
 }
